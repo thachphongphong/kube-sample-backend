@@ -1,22 +1,22 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: sample-app-dc
-  namespace: frontend
+  name: sample-backend-dc
+  namespace: backend
 spec:
 #  replicas: 1
 #  revisionHistoryLimit: 2 
   template:
     metadata:
-      name: sample-app
+      name: sample-backend
 #      labels:
-#        app: sample-app
-#        role: frontend
+#        app: sample-backend
+#        role: backend
 #        env: dev
     spec:
       containers:
-      - name: sample-app
-        image: gcr.io/gdg-demo/sample-app:v1.0.0
+      - name: sample-backend
+        image: gcr.io/gdg-demo/sample-backend:v1.0.0
 #        resources:
 #          limits:
 #            memory: "500Mi"
@@ -27,5 +27,5 @@ spec:
 #            path: /
 #            port: 80
         ports:
-        - name: sample-app
-          containerPort: 80
+        - name: sample-backend
+          containerPort: 8080

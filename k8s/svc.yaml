@@ -1,15 +1,16 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: sample-app-svc
+  name: sample-backend-svc
+  namespace: backend
 spec:
   type: LoadBalancer
 #  loadBalancerIP: 104.199.190.226
   ports:
   - name: http
-    port: 80
-    targetPort: 80
+    port: 8080
+    targetPort: 8080
     protocol: TCP
   selector:
-    name: sample-app
-#    role: frontend
+    name: sample-backend
+#    role: backend
