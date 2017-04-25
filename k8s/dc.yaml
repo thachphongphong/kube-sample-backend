@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sample-backend
-        image: asia.gcr.io/gdg-demo-165104/kube-sample-backend
+        image: asia.gcr.io/gdg-demo-165702/kube-sample-backend
 #        resources:
 #          limits:
 #            memory: "500Mi"
